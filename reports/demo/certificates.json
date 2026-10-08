@@ -1,0 +1,156 @@
+[
+  {
+    "site_id": "demo-package-001",
+    "origin": "new_controlled_demonstration",
+    "mechanical_repeats": 5,
+    "reference_repeats": 3,
+    "state_fingerprints": {
+      "PRE": "a66435e0ac64a663ba53792e5f32255c40861950e229486711e50d122e38416c",
+      "REAL": "42217dccfcf59acd0cd8326d622484ec3993f52dcf51702b03b626c5dd2d2797",
+      "UNDO": "a66435e0ac64a663ba53792e5f32255c40861950e229486711e50d122e38416c",
+      "REINTRO": "42217dccfcf59acd0cd8326d622484ec3993f52dcf51702b03b626c5dd2d2797",
+      "WORKTREE": "a66435e0ac64a663ba53792e5f32255c40861950e229486711e50d122e38416c",
+      "OUTSIDE": "42217dccfcf59acd0cd8326d622484ec3993f52dcf51702b03b626c5dd2d2797",
+      "POST": "4958b65a132512b93bf459dcea2a895b8b48e362dddfa245f710f46afac3d61c"
+    },
+    "certified": true,
+    "projection": "bytes, paths, modes, symlink targets; excludes mtime from equality",
+    "first_request_sha256": "78bb878a59160bd9bde86a1488ce0697deb3a5d5e7282aa328d320780c314aa0",
+    "post_eligible": true,
+    "changed_paths": [
+      "packages",
+      "packages/demo_alpha",
+      "packages/demo_alpha-1.0.0.dist-info",
+      "packages/demo_alpha-1.0.0.dist-info/INSTALLER",
+      "packages/demo_alpha-1.0.0.dist-info/METADATA",
+      "packages/demo_alpha-1.0.0.dist-info/RECORD",
+      "packages/demo_alpha-1.0.0.dist-info/REQUESTED",
+      "packages/demo_alpha-1.0.0.dist-info/WHEEL",
+      "packages/demo_alpha-1.0.0.dist-info/direct_url.json",
+      "packages/demo_alpha/__init__.py"
+    ]
+  },
+  {
+    "site_id": "demo-venv-001",
+    "origin": "new_controlled_demonstration",
+    "mechanical_repeats": 5,
+    "reference_repeats": 3,
+    "state_fingerprints": {
+      "PRE": "f508b7100c8ab8d4df6afcdc139788b2b5c83100bfe5f27ca729bec8cf9eefc5",
+      "REAL": "27534470a58f9181c9c0b03da9b78f940ba3f40201604f705629eb0e0d71dd07",
+      "UNDO": "f508b7100c8ab8d4df6afcdc139788b2b5c83100bfe5f27ca729bec8cf9eefc5",
+      "REINTRO": "27534470a58f9181c9c0b03da9b78f940ba3f40201604f705629eb0e0d71dd07",
+      "WORKTREE": "f508b7100c8ab8d4df6afcdc139788b2b5c83100bfe5f27ca729bec8cf9eefc5",
+      "OUTSIDE": "27534470a58f9181c9c0b03da9b78f940ba3f40201604f705629eb0e0d71dd07",
+      "POST": "495d45e499379a528a2701057b62d7b22220bb466c028d090eb19921a7852dfe"
+    },
+    "certified": true,
+    "projection": "bytes, paths, modes, symlink targets; excludes mtime from equality",
+    "first_request_sha256": "5f7141a9b03cb5e6796b01a4293f3bb5baa2450511d8e23d9b9912433ff971b4",
+    "post_eligible": true,
+    "changed_paths": [
+      ".venv",
+      ".venv/Include",
+      ".venv/Lib",
+      ".venv/Lib/site-packages",
+      ".venv/Scripts",
+      ".venv/Scripts/Activate.ps1",
+      ".venv/Scripts/activate",
+      ".venv/Scripts/activate.bat",
+      ".venv/Scripts/deactivate.bat",
+      ".venv/Scripts/python.exe",
+      ".venv/Scripts/pythonw.exe",
+      ".venv/pyvenv.cfg"
+    ]
+  },
+  {
+    "site_id": "demo-patch-001",
+    "origin": "new_controlled_demonstration",
+    "mechanical_repeats": 5,
+    "reference_repeats": 3,
+    "state_fingerprints": {
+      "PRE": "ca88b67212b18fc22679d9abe29479015d9c7d3453664c77aefcdd77044807da",
+      "REAL": "29f7485bbe11d5442d7460c0b98ab643721fc667b3a3f36528c61e8a9c142f86",
+      "UNDO": "ca88b67212b18fc22679d9abe29479015d9c7d3453664c77aefcdd77044807da",
+      "REINTRO": "29f7485bbe11d5442d7460c0b98ab643721fc667b3a3f36528c61e8a9c142f86",
+      "WORKTREE": "29f7485bbe11d5442d7460c0b98ab643721fc667b3a3f36528c61e8a9c142f86",
+      "OUTSIDE": "ca88b67212b18fc22679d9abe29479015d9c7d3453664c77aefcdd77044807da"
+    },
+    "certified": true,
+    "projection": "bytes, paths, modes, symlink targets; excludes mtime from equality",
+    "first_request_sha256": "5f1ed85d7a96e0f24c2ec1c6506d3fb365c5f56dcf9460541b4cc7a6d3724a99",
+    "post_eligible": false,
+    "changed_paths": [
+      "a.txt",
+      "b.txt.rej"
+    ]
+  },
+  {
+    "site_id": "demo-database-001",
+    "origin": "new_controlled_demonstration",
+    "mechanical_repeats": 5,
+    "reference_repeats": 3,
+    "state_fingerprints": {
+      "PRE": "6a238523528a458fa06091d80324df1b2eedf0cdcae138e28ab5341f5fdfe63f",
+      "REAL": "96b3de51133fa093697d94043a5c8a489486e5f0c2cbbae0dbc1b1a880b2db41",
+      "UNDO": "6a238523528a458fa06091d80324df1b2eedf0cdcae138e28ab5341f5fdfe63f",
+      "REINTRO": "96b3de51133fa093697d94043a5c8a489486e5f0c2cbbae0dbc1b1a880b2db41",
+      "WORKTREE": "6a238523528a458fa06091d80324df1b2eedf0cdcae138e28ab5341f5fdfe63f",
+      "OUTSIDE": "96b3de51133fa093697d94043a5c8a489486e5f0c2cbbae0dbc1b1a880b2db41"
+    },
+    "certified": true,
+    "projection": "bytes, paths, modes, symlink targets; excludes mtime from equality",
+    "first_request_sha256": "921a02f58c4880eb44b18f84547702c02b341116601ebef7a75c1be357781a58",
+    "post_eligible": false,
+    "changed_paths": [
+      "records.sqlite"
+    ]
+  },
+  {
+    "site_id": "demo-build-001",
+    "origin": "new_controlled_demonstration",
+    "mechanical_repeats": 5,
+    "reference_repeats": 3,
+    "state_fingerprints": {
+      "PRE": "6ea2c44b5d58328d872c56f3e37dbdf1dd6acfa0df0750cdf60ed41e4a379bc0",
+      "REAL": "d571330c64e7c98828d0de8f661117f20364cd678088d916904656c0e9325451",
+      "UNDO": "6ea2c44b5d58328d872c56f3e37dbdf1dd6acfa0df0750cdf60ed41e4a379bc0",
+      "REINTRO": "d571330c64e7c98828d0de8f661117f20364cd678088d916904656c0e9325451",
+      "WORKTREE": "6ea2c44b5d58328d872c56f3e37dbdf1dd6acfa0df0750cdf60ed41e4a379bc0",
+      "OUTSIDE": "d571330c64e7c98828d0de8f661117f20364cd678088d916904656c0e9325451",
+      "POST": "72977f0e1ed1af928955f7df8e22e07aa06c43939cf23fb938d7a06efa17ea1a"
+    },
+    "certified": true,
+    "projection": "bytes, paths, modes, symlink targets; excludes mtime from equality",
+    "first_request_sha256": "6964d061cb5320f41762875aa263a9ccd0590f996f3214c1839e57ba98f7b3dc",
+    "post_eligible": true,
+    "changed_paths": [
+      "cache",
+      "cache/alpha.pyc",
+      "cache/alpha.sha256"
+    ]
+  },
+  {
+    "site_id": "demo-generation-001",
+    "origin": "new_controlled_demonstration",
+    "mechanical_repeats": 5,
+    "reference_repeats": 3,
+    "state_fingerprints": {
+      "PRE": "85bff06bb5988108cdf638cac2d9cd8fe7e86009d939a33a20ad8e4ff830ff57",
+      "REAL": "31dd80b989f5559f94389dae27bd0b60d5d7c1cf3c60c051890c28509c14c3f4",
+      "UNDO": "85bff06bb5988108cdf638cac2d9cd8fe7e86009d939a33a20ad8e4ff830ff57",
+      "REINTRO": "31dd80b989f5559f94389dae27bd0b60d5d7c1cf3c60c051890c28509c14c3f4",
+      "WORKTREE": "31dd80b989f5559f94389dae27bd0b60d5d7c1cf3c60c051890c28509c14c3f4",
+      "OUTSIDE": "85bff06bb5988108cdf638cac2d9cd8fe7e86009d939a33a20ad8e4ff830ff57",
+      "POST": "4f055a0b90dc806e7e8521ed0975306b6c442cea2af91eb7c1189c9ec93b1ae8"
+    },
+    "certified": true,
+    "projection": "bytes, paths, modes, symlink targets; excludes mtime from equality",
+    "first_request_sha256": "d66ce5f5c852acf3ebf0f195c2c4ae6765b9a8341519ed9e31c7b755e5186ae3",
+    "post_eligible": true,
+    "changed_paths": [
+      "generated",
+      "generated/header.txt"
+    ]
+  }
+]

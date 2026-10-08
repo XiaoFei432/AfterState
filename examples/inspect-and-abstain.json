@@ -1,0 +1,6 @@
+[
+  {"type": "list", "path": "."},
+  {"type": "read", "path": "prior-work.txt"},
+  {"type": "continue"},
+  {"type": "final", "claim": false, "text": "No recovery attempted by this scripted adapter."}
+]

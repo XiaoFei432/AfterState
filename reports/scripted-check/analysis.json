@@ -1,0 +1,139 @@
+{
+  "sites": 2,
+  "matched_blocks": 2,
+  "controllers": {
+    "Inspect-3": {
+      "metrics": {
+        "PRE": {
+          "success": 0.0,
+          "silent_error": 0.0,
+          "actions": 4.0,
+          "functional": 0.0
+        },
+        "REAL": {
+          "success": 0.0,
+          "silent_error": 0.0,
+          "actions": 4.0,
+          "functional": 0.0
+        }
+      },
+      "pre_minus_real_pp": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_centered_bootstrap": 1.0,
+        "repository_clusters": 2,
+        "resamples": 10000,
+        "seed": 1729
+      },
+      "equivalent_within_2pp": true,
+      "paired_outcomes": {
+        "other_failure/other_failure": 2
+      }
+    },
+    "Native": {
+      "metrics": {
+        "PRE": {
+          "success": 0.0,
+          "silent_error": 1.0,
+          "actions": 1.0,
+          "functional": 0.0
+        },
+        "REAL": {
+          "success": 0.0,
+          "silent_error": 1.0,
+          "actions": 1.0,
+          "functional": 0.0
+        }
+      },
+      "pre_minus_real_pp": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_centered_bootstrap": 1.0,
+        "repository_clusters": 2,
+        "resamples": 10000,
+        "seed": 1729
+      },
+      "equivalent_within_2pp": true,
+      "paired_outcomes": {
+        "silent/silent": 2
+      }
+    },
+    "Retry-1": {
+      "metrics": {
+        "PRE": {
+          "success": 0.0,
+          "silent_error": 1.0,
+          "actions": 2.0,
+          "functional": 0.0
+        },
+        "REAL": {
+          "success": 0.0,
+          "silent_error": 1.0,
+          "actions": 2.0,
+          "functional": 0.0
+        }
+      },
+      "pre_minus_real_pp": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_centered_bootstrap": 1.0,
+        "repository_clusters": 2,
+        "resamples": 10000,
+        "seed": 1729
+      },
+      "equivalent_within_2pp": true,
+      "paired_outcomes": {
+        "silent/silent": 2
+      }
+    }
+  },
+  "interactions": {
+    "Native vs Inspect-3": {
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "p_centered_bootstrap": 1.0,
+      "repository_clusters": 2,
+      "resamples": 10000,
+      "seed": 1729,
+      "p_holm": 1.0
+    },
+    "Retry-1 vs Inspect-3": {
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "p_centered_bootstrap": 1.0,
+      "repository_clusters": 2,
+      "resamples": 10000,
+      "seed": 1729,
+      "p_holm": 1.0
+    },
+    "Retry-1 vs Native": {
+      "estimate": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "p_centered_bootstrap": 1.0,
+      "repository_clusters": 2,
+      "resamples": 10000,
+      "seed": 1729,
+      "p_holm": 1.0
+    }
+  },
+  "units": "rates are fractions; contrasts and CIs are percentage points",
+  "p_value_method": "two-sided centered repository bootstrap approximation; Holm within controller-pair family"
+}

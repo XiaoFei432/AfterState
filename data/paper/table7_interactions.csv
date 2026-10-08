@@ -1,0 +1,11 @@
+first,second,pre_advantage_pp,real_advantage_pp,interaction_pp,reversal
+Retry-1,Native,5,-2.5,-7.5,True
+Reflexion,Native,2.5,2.5,0,False
+Self-Refine,Native,3.3,5,1.7,False
+Inspect-3,Native,0.8,10.8,10,False
+Reflexion,Retry-1,-2.5,5,7.5,True
+Self-Refine,Retry-1,-1.7,7.5,9.2,True
+Inspect-3,Retry-1,-4.2,13.3,17.5,True
+Self-Refine,Reflexion,0.8,2.5,1.7,False
+Inspect-3,Reflexion,-1.7,8.3,10,True
+Inspect-3,Self-Refine,-2.5,5.8,8.3,True

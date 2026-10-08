@@ -1,0 +1,101 @@
+{
+  "source": "Manuscript Table 1 and Section 5.1",
+  "frameworks": [
+    {
+      "name": "mini-SWE-agent",
+      "version": "v2.4.6",
+      "source_commit": null,
+      "native_adapter_available": false,
+      "url": "https://github.com/SWE-agent/mini-swe-agent"
+    },
+    {
+      "name": "SWE-agent",
+      "version": "v1.1.0",
+      "source_commit": null,
+      "native_adapter_available": false,
+      "url": "https://github.com/SWE-agent/SWE-agent"
+    },
+    {
+      "name": "OpenHands",
+      "version": "0.54.0",
+      "source_commit": null,
+      "native_adapter_available": false,
+      "url": "https://github.com/OpenHands/OpenHands"
+    },
+    {
+      "name": "Live-SWE-agent",
+      "version": "v1.0.0",
+      "source_commit": null,
+      "native_adapter_available": false,
+      "url": "https://github.com/OpenAutoCoder/live-swe-agent"
+    }
+  ],
+  "models": [
+    {
+      "id": "mistralai/Devstral-Small-2507",
+      "revision": null,
+      "main": true
+    },
+    {
+      "id": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+      "revision": null,
+      "main": true
+    },
+    {
+      "id": "claude-sonnet-4-6",
+      "revision": null,
+      "main": false
+    }
+  ],
+  "inference": {
+    "engine": "vLLM",
+    "version": "0.10.2",
+    "dtype": "bfloat16",
+    "tensor_parallel_size": 2,
+    "context_length": 65536,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "hardware": "2 x A100 80 GB"
+  },
+  "sandbox": {
+    "vcpus": 4,
+    "memory_gib": 8,
+    "writable_storage_gib": 20
+  },
+  "standard_budget": {
+    "actions": 40,
+    "generated_tokens": 16000,
+    "seconds": 1800,
+    "command_timeout_seconds": 300,
+    "response_tokens": 2048
+  },
+  "resource_grid": [
+    {
+      "actions": 10,
+      "generated_tokens": 4000,
+      "seconds": 450
+    },
+    {
+      "actions": 20,
+      "generated_tokens": 8000,
+      "seconds": 900
+    },
+    {
+      "actions": 40,
+      "generated_tokens": 16000,
+      "seconds": 1800
+    },
+    {
+      "actions": 80,
+      "generated_tokens": 32000,
+      "seconds": 3600
+    }
+  ],
+  "repeats": 3,
+  "bootstrap_resamples": 10000,
+  "equivalence_margin_pp": 2,
+  "handoff_equivalence_margin_pp": 3,
+  "tie_order": null,
+  "tie_order_note": "Original tie order unavailable in the supplied PDF; the selection command accepts a caller-specified order.",
+  "pin_status": "Source commits and model revisions unavailable; native adapters not included."
+}

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "afterstate-artifact"
+version = "0.1.0"
+description = "AfterState submission artifact and executable reference protocol"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.6,<4", "numpy>=1.23,<3"]
+test = ["pytest>=7,<9"]
+
+[project.scripts]
+afterstate = "afterstate.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["afterstate*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

@@ -1,0 +1,4 @@
+controller,pre_success_count,real_success_count,pre_success_pct,real_success_pct,pre_silent_pct,real_silent_pct,pre_actions,real_actions
+Native,516,450,71.7,62.5,2.8,8.3,11.4,18.1
+Retry-1,546,432,75.8,60,2.6,10.8,10.5,17.8
+Inspect-3,525,510,72.9,70.8,1.7,4.6,12,16.9

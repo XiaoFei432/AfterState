@@ -1,0 +1,21 @@
+{
+  "site_id": "demo-database-001",
+  "origin": "new_controlled_demonstration",
+  "mechanical_repeats": 5,
+  "reference_repeats": 3,
+  "state_fingerprints": {
+    "PRE": "6a238523528a458fa06091d80324df1b2eedf0cdcae138e28ab5341f5fdfe63f",
+    "REAL": "96b3de51133fa093697d94043a5c8a489486e5f0c2cbbae0dbc1b1a880b2db41",
+    "UNDO": "6a238523528a458fa06091d80324df1b2eedf0cdcae138e28ab5341f5fdfe63f",
+    "REINTRO": "96b3de51133fa093697d94043a5c8a489486e5f0c2cbbae0dbc1b1a880b2db41",
+    "WORKTREE": "6a238523528a458fa06091d80324df1b2eedf0cdcae138e28ab5341f5fdfe63f",
+    "OUTSIDE": "96b3de51133fa093697d94043a5c8a489486e5f0c2cbbae0dbc1b1a880b2db41"
+  },
+  "certified": true,
+  "projection": "bytes, paths, modes, symlink targets; excludes mtime from equality",
+  "first_request_sha256": "921a02f58c4880eb44b18f84547702c02b341116601ebef7a75c1be357781a58",
+  "post_eligible": false,
+  "changed_paths": [
+    "records.sqlite"
+  ]
+}

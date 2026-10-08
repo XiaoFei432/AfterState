@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:afterstate:site:1",
+  "title": "AfterState site manifest",
+  "type": "object",
+  "required": [
+    "site_id",
+    "repository",
+    "category",
+    "origin",
+    "task",
+    "command",
+    "legal_post"
+  ],
+  "properties": {
+    "site_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repository": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "enum": [
+        "package",
+        "venv",
+        "patch",
+        "database",
+        "build",
+        "generation"
+      ]
+    },
+    "origin": {
+      "enum": [
+        "natural",
+        "controlled",
+        "new_controlled_demonstration"
+      ]
+    },
+    "task": {
+      "type": "string",
+      "minLength": 1
+    },
+    "command": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "legal_post": {
+      "type": "boolean"
+    },
+    "repository_revision": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "state_backend": {
+      "type": "string"
+    },
+    "resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "mount",
+          "writable"
+        ],
+        "properties": {
+          "mount": {
+            "type": "string"
+          },
+          "writable": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "before_snapshot": {
+      "type": "string"
+    },
+    "after_snapshot": {
+      "type": "string"
+    },
+    "command_contract": {
+      "type": "string"
+    },
+    "task_oracle": {
+      "type": "string"
+    },
+    "source_configuration": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "future_fault_schedule": {
+      "type": [
+        "string",
+        "object"
+      ]
+    }
+  }
+}

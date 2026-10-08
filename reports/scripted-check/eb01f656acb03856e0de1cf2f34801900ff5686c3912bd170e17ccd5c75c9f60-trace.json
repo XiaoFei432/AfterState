@@ -1,0 +1,20 @@
+{
+  "actions": 1,
+  "generated_tokens": 0,
+  "completion_claim": true,
+  "termination": "completion_claim",
+  "elapsed_seconds": 0.0,
+  "first_model_request_sha256": "adcefd91f4e3e913bf71bcfee17c34b85f4b6bf7b4226828362ee42a5f50286d",
+  "model_request_sha256": [
+    "adcefd91f4e3e913bf71bcfee17c34b85f4b6bf7b4226828362ee42a5f50286d"
+  ],
+  "events": [
+    {
+      "action": {
+        "type": "final",
+        "claim": true,
+        "text": "Task completed."
+      }
+    }
+  ]
+}

@@ -1,0 +1,499 @@
+{
+  "provenance": {
+    "kind": "transcribed_paper_aggregates",
+    "source": "fse2027-paper3929.pdf",
+    "source_pages": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "not_new_experiments": true,
+    "run_level_records_available": false,
+    "precision": "Preserve published rounded percentages; counts only where printed. Null means not numerically reported.",
+    "intervals": "No confidence intervals can be recovered without linked repository/run records."
+  },
+  "audit": {
+    "invocations": 18000,
+    "trajectories": 1200,
+    "repositories": 120,
+    "nonzero_returns": 2400,
+    "partial": 600,
+    "complete_despite_error": 120,
+    "no_relevant_effects": 1560,
+    "insufficient_evidence": 120
+  },
+  "main": {
+    "per_protocol": 5760,
+    "pre_success_count": 4164,
+    "real_success_count": 3624,
+    "pre_silent_pct": 3.1,
+    "real_silent_pct": 7.9,
+    "pre_actions": 12.5,
+    "real_actions": 17.0,
+    "configurations": [
+      {
+        "agent": "mini-SWE-agent",
+        "model": "Devstral",
+        "pre_success_pct": 70,
+        "real_success_pct": 55,
+        "gap_pp": 15,
+        "pre_silent_pct": 3.3,
+        "real_silent_pct": 10.8,
+        "pre_actions": 11.5,
+        "real_actions": 19
+      },
+      {
+        "agent": "mini-SWE-agent",
+        "model": "Qwen",
+        "pre_success_pct": 75,
+        "real_success_pct": 60,
+        "gap_pp": 15,
+        "pre_silent_pct": 2.5,
+        "real_silent_pct": 9.2,
+        "pre_actions": 10.5,
+        "real_actions": 18
+      },
+      {
+        "agent": "SWE-agent",
+        "model": "Devstral",
+        "pre_success_pct": 67.5,
+        "real_success_pct": 59.2,
+        "gap_pp": 8.3,
+        "pre_silent_pct": 4.2,
+        "real_silent_pct": 9.2,
+        "pre_actions": 12.5,
+        "real_actions": 18
+      },
+      {
+        "agent": "SWE-agent",
+        "model": "Qwen",
+        "pre_success_pct": 72.5,
+        "real_success_pct": 64.2,
+        "gap_pp": 8.3,
+        "pre_silent_pct": 3.3,
+        "real_silent_pct": 8.3,
+        "pre_actions": 12,
+        "real_actions": 17
+      },
+      {
+        "agent": "OpenHands",
+        "model": "Devstral",
+        "pre_success_pct": 65,
+        "real_success_pct": 60.8,
+        "gap_pp": 4.2,
+        "pre_silent_pct": 4.2,
+        "real_silent_pct": 7.5,
+        "pre_actions": 14.5,
+        "real_actions": 15.5
+      },
+      {
+        "agent": "OpenHands",
+        "model": "Qwen",
+        "pre_success_pct": 70.8,
+        "real_success_pct": 65.8,
+        "gap_pp": 5,
+        "pre_silent_pct": 3.3,
+        "real_silent_pct": 6.7,
+        "pre_actions": 14,
+        "real_actions": 14.5
+      },
+      {
+        "agent": "Live-SWE-agent",
+        "model": "Devstral",
+        "pre_success_pct": 76.7,
+        "real_success_pct": 66.7,
+        "gap_pp": 10,
+        "pre_silent_pct": 2.5,
+        "real_silent_pct": 6.7,
+        "pre_actions": 13,
+        "real_actions": 17.5
+      },
+      {
+        "agent": "Live-SWE-agent",
+        "model": "Qwen",
+        "pre_success_pct": 80.8,
+        "real_success_pct": 71.7,
+        "gap_pp": 9.2,
+        "pre_silent_pct": 1.7,
+        "real_silent_pct": 5,
+        "pre_actions": 12,
+        "real_actions": 16.5
+      }
+    ]
+  },
+  "main_pairing": {
+    "both_success": 3174,
+    "pre_only": 990,
+    "real_only": 450,
+    "both_failure": 1146
+  },
+  "oracle": {
+    "pre_full": 4164,
+    "real_full": 3624,
+    "pre_functional": 4374,
+    "real_functional": 4188,
+    "per_protocol": 5760
+  },
+  "categories": [
+    {
+      "category": "Package installation",
+      "natural": 36,
+      "controlled": 4,
+      "pre_success_pct": 72.9,
+      "real_success_pct": 55.2,
+      "gap_pp": 17.7,
+      "disagreement_pct": 24
+    },
+    {
+      "category": "Virtual environment",
+      "natural": 34,
+      "controlled": 6,
+      "pre_success_pct": 75.4,
+      "real_success_pct": 58.8,
+      "gap_pp": 16.7,
+      "disagreement_pct": 23.8
+    },
+    {
+      "category": "Patch application",
+      "natural": 32,
+      "controlled": 8,
+      "pre_success_pct": 70.6,
+      "real_success_pct": 64.8,
+      "gap_pp": 5.8,
+      "disagreement_pct": 18.3
+    },
+    {
+      "category": "Database / migration",
+      "natural": 26,
+      "controlled": 14,
+      "pre_success_pct": 71.9,
+      "real_success_pct": 54.2,
+      "gap_pp": 17.7,
+      "disagreement_pct": 26
+    },
+    {
+      "category": "Build artifacts / cache",
+      "natural": 30,
+      "controlled": 10,
+      "pre_success_pct": 69.6,
+      "real_success_pct": 74.6,
+      "gap_pp": -5,
+      "disagreement_pct": 27.1
+    },
+    {
+      "category": "Multi-file generation",
+      "natural": 22,
+      "controlled": 18,
+      "pre_success_pct": 73.3,
+      "real_success_pct": 70,
+      "gap_pp": 3.3,
+      "disagreement_pct": 30.8
+    }
+  ],
+  "surgery": {
+    "per_condition": 1440,
+    "success_counts": {
+      "PRE": 1044,
+      "REAL": 894,
+      "UNDO": 1032,
+      "REINTRO": 906,
+      "WORKTREE": 974,
+      "OUTSIDE": 948
+    },
+    "coverage_strata": [
+      "worktree-contained",
+      "outside-worktree",
+      "mixed"
+    ],
+    "stratum_success_counts": null
+  },
+  "feedback": [
+    {
+      "form": "Raw",
+      "pre_success_count": 1044,
+      "real_success_count": 894,
+      "per_protocol": 1440
+    },
+    {
+      "form": "Neutral",
+      "pre_success_count": 1032,
+      "real_success_count": 888,
+      "per_protocol": 1440
+    },
+    {
+      "form": "Terse",
+      "pre_success_count": 1008,
+      "real_success_count": 870,
+      "per_protocol": 1440
+    },
+    {
+      "form": "No-effect",
+      "pre_success_count": 1092,
+      "real_success_count": 1083,
+      "per_protocol": 1440
+    }
+  ],
+  "policy": [
+    {
+      "controller": "Native",
+      "pre_success_pct": 72.5,
+      "real_success_pct": 57.5,
+      "pre_silent_pct": 2.9,
+      "real_silent_pct": 10
+    },
+    {
+      "controller": "Retry-1",
+      "pre_success_pct": 77.5,
+      "real_success_pct": 55,
+      "pre_silent_pct": 2.5,
+      "real_silent_pct": 15
+    },
+    {
+      "controller": "Reflexion",
+      "pre_success_pct": 75,
+      "real_success_pct": 60,
+      "pre_silent_pct": 2.5,
+      "real_silent_pct": 10
+    },
+    {
+      "controller": "Self-Refine",
+      "pre_success_pct": 75.8,
+      "real_success_pct": 62.5,
+      "pre_silent_pct": 2.1,
+      "real_silent_pct": 8.3
+    },
+    {
+      "controller": "Inspect-3",
+      "pre_success_pct": 73.3,
+      "real_success_pct": 68.3,
+      "pre_silent_pct": 1.7,
+      "real_silent_pct": 5
+    }
+  ],
+  "pairwise_interactions": [
+    {
+      "first": "Retry-1",
+      "second": "Native",
+      "pre_advantage_pp": 5,
+      "real_advantage_pp": -2.5,
+      "interaction_pp": -7.5,
+      "reversal": true
+    },
+    {
+      "first": "Reflexion",
+      "second": "Native",
+      "pre_advantage_pp": 2.5,
+      "real_advantage_pp": 2.5,
+      "interaction_pp": 0,
+      "reversal": false
+    },
+    {
+      "first": "Self-Refine",
+      "second": "Native",
+      "pre_advantage_pp": 3.3,
+      "real_advantage_pp": 5,
+      "interaction_pp": 1.7,
+      "reversal": false
+    },
+    {
+      "first": "Inspect-3",
+      "second": "Native",
+      "pre_advantage_pp": 0.8,
+      "real_advantage_pp": 10.8,
+      "interaction_pp": 10,
+      "reversal": false
+    },
+    {
+      "first": "Reflexion",
+      "second": "Retry-1",
+      "pre_advantage_pp": -2.5,
+      "real_advantage_pp": 5,
+      "interaction_pp": 7.5,
+      "reversal": true
+    },
+    {
+      "first": "Self-Refine",
+      "second": "Retry-1",
+      "pre_advantage_pp": -1.7,
+      "real_advantage_pp": 7.5,
+      "interaction_pp": 9.2,
+      "reversal": true
+    },
+    {
+      "first": "Inspect-3",
+      "second": "Retry-1",
+      "pre_advantage_pp": -4.2,
+      "real_advantage_pp": 13.3,
+      "interaction_pp": 17.5,
+      "reversal": true
+    },
+    {
+      "first": "Self-Refine",
+      "second": "Reflexion",
+      "pre_advantage_pp": 0.8,
+      "real_advantage_pp": 2.5,
+      "interaction_pp": 1.7,
+      "reversal": false
+    },
+    {
+      "first": "Inspect-3",
+      "second": "Reflexion",
+      "pre_advantage_pp": -1.7,
+      "real_advantage_pp": 8.3,
+      "interaction_pp": 10,
+      "reversal": true
+    },
+    {
+      "first": "Inspect-3",
+      "second": "Self-Refine",
+      "pre_advantage_pp": -2.5,
+      "real_advantage_pp": 5.8,
+      "interaction_pp": 8.3,
+      "reversal": true
+    }
+  ],
+  "inspection": [
+    {
+      "reads": 0,
+      "pre_success_pct": 72.5,
+      "real_success_pct": 57.5
+    },
+    {
+      "reads": 1,
+      "pre_success_pct": null,
+      "real_success_pct": 65
+    },
+    {
+      "reads": 3,
+      "pre_success_pct": 73.3,
+      "real_success_pct": 68.3
+    },
+    {
+      "reads": 6,
+      "pre_success_pct": 69.2,
+      "real_success_pct": 67.5
+    }
+  ],
+  "read3": {
+    "pre_success_pct": null,
+    "real_success_pct": 56.8
+  },
+  "resource": [
+    {
+      "actions": 10,
+      "interaction_pp": 20.8,
+      "inspect_pre_pct": 38.3,
+      "inspect_real_pct": 38.3,
+      "retry_pre_pct": 50.8,
+      "retry_real_pct": 30.0
+    },
+    {
+      "actions": 20,
+      "interaction_pp": 23.3,
+      "inspect_pre_pct": null,
+      "inspect_real_pct": null,
+      "retry_pre_pct": null,
+      "retry_real_pct": null
+    },
+    {
+      "actions": 40,
+      "interaction_pp": 17.5,
+      "inspect_pre_pct": null,
+      "inspect_real_pct": null,
+      "retry_pre_pct": null,
+      "retry_real_pct": null
+    },
+    {
+      "actions": 80,
+      "interaction_pp": 16.7,
+      "inspect_pre_pct": 77.5,
+      "inspect_real_pct": 77.5,
+      "retry_pre_pct": 80,
+      "retry_real_pct": 63.3
+    }
+  ],
+  "replication": {
+    "per_protocol_per_controller": 720,
+    "controllers": [
+      {
+        "controller": "Native",
+        "pre_success_count": 516,
+        "real_success_count": 450,
+        "pre_success_pct": 71.7,
+        "real_success_pct": 62.5,
+        "pre_silent_pct": 2.8,
+        "real_silent_pct": 8.3,
+        "pre_actions": 11.4,
+        "real_actions": 18.1
+      },
+      {
+        "controller": "Retry-1",
+        "pre_success_count": 546,
+        "real_success_count": 432,
+        "pre_success_pct": 75.8,
+        "real_success_pct": 60,
+        "pre_silent_pct": 2.6,
+        "real_silent_pct": 10.8,
+        "pre_actions": 10.5,
+        "real_actions": 17.8
+      },
+      {
+        "controller": "Inspect-3",
+        "pre_success_count": 525,
+        "real_success_count": 510,
+        "pre_success_pct": 72.9,
+        "real_success_pct": 70.8,
+        "pre_silent_pct": 1.7,
+        "real_silent_pct": 4.6,
+        "pre_actions": 12,
+        "real_actions": 16.9
+      }
+    ],
+    "pairing_real": {
+      "both_success": 384,
+      "retry_only": 48,
+      "inspect_only": 126,
+      "both_failure": 162
+    }
+  },
+  "model_policy_advantage": [
+    {
+      "model": "Devstral",
+      "pre_pp": -5,
+      "real_pp": 13.3
+    },
+    {
+      "model": "Qwen",
+      "pre_pp": -3.3,
+      "real_pp": 13.3
+    },
+    {
+      "model": "Sonnet",
+      "pre_pp": -2.5,
+      "real_pp": 10.8
+    },
+    {
+      "model": "New repos.",
+      "pre_pp": -2.9,
+      "real_pp": 10.8
+    }
+  ],
+  "other_controls": {
+    "legal_post_success_pct": 78,
+    "legal_post_pre_pct": 72.1,
+    "legal_post_real_pct": 62.1,
+    "native_handoff_gap_pp": 9.4,
+    "standardized_handoff_gap_pp": 9.4
+  },
+  "source_caveats": [
+    "Figure 7(b) stratum-level numeric values are unavailable.",
+    "Figure 9(b) does not print all controller-by-budget rates: only text-reported values are retained.",
+    "The 40-action resource cohort is SURGERY; Figure 8 uses POLICY. Resource cells without numeric source values are null.",
+    "The supplement referenced by the paper was not provided; immutable commits, revisions and seed bank cannot be recovered.",
+    "Figure 4 provides aggregate admission totals 600/480/360/240; individual rejection records are unavailable."
+  ]
+}

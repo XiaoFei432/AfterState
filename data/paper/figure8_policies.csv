@@ -1,0 +1,6 @@
+controller,pre_success_pct,real_success_pct,pre_silent_pct,real_silent_pct
+Native,72.5,57.5,2.9,10
+Retry-1,77.5,55,2.5,15
+Reflexion,75,60,2.5,10
+Self-Refine,75.8,62.5,2.1,8.3
+Inspect-3,73.3,68.3,1.7,5

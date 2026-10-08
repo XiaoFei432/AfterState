@@ -1,0 +1,9 @@
+agent,model,pre_success_pct,real_success_pct,gap_pp,pre_silent_pct,real_silent_pct,pre_actions,real_actions
+mini-SWE-agent,Devstral,70,55,15,3.3,10.8,11.5,19
+mini-SWE-agent,Qwen,75,60,15,2.5,9.2,10.5,18
+SWE-agent,Devstral,67.5,59.2,8.3,4.2,9.2,12.5,18
+SWE-agent,Qwen,72.5,64.2,8.3,3.3,8.3,12,17
+OpenHands,Devstral,65,60.8,4.2,4.2,7.5,14.5,15.5
+OpenHands,Qwen,70.8,65.8,5,3.3,6.7,14,14.5
+Live-SWE-agent,Devstral,76.7,66.7,10,2.5,6.7,13,17.5
+Live-SWE-agent,Qwen,80.8,71.7,9.2,1.7,5,12,16.5

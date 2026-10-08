@@ -1,0 +1,230 @@
+[
+  {
+    "site_id": "demo-package-001",
+    "category": "package",
+    "task": "Install both local demo wheels in packages/, ensure both import with VALUE=42, and preserve prior-work.txt.",
+    "command": [
+      "{python}",
+      "operation.py"
+    ],
+    "legal_post": true,
+    "fault_class": "controlled_external_fault",
+    "origin": "new_controlled_demonstration",
+    "repository": "demo-package",
+    "state_backend": "declared-directory-demo",
+    "history": [
+      {
+        "command": [
+          "{python}",
+          "operation.py"
+        ],
+        "result": {
+          "argv": [
+            "{python}",
+            "operation.py"
+          ],
+          "exit_code": 1,
+          "stdout": "Processing /task\\wheels\\demo_alpha-1.0.0-py3-none-any.whl\r\nInstalling collected packages: demo-alpha\r\nSuccessfully installed demo-alpha-1.0.0\r\n",
+          "stderr": "controlled package source unavailable\r\n"
+        }
+      }
+    ],
+    "future_fault_schedule": "one-shot failure; clear at boundary in every branch",
+    "certification": {
+      "mechanical_repetitions": 5,
+      "reference_repetitions": 3
+    },
+    "reference_repair_visible_to_agent": false
+  },
+  {
+    "site_id": "demo-venv-001",
+    "category": "venv",
+    "task": "Create a usable isolated .venv interpreter and environment.json with ready=true; preserve prior-work.txt. No pip is required.",
+    "command": [
+      "{python}",
+      "operation.py"
+    ],
+    "legal_post": true,
+    "fault_class": "controlled_external_fault",
+    "origin": "new_controlled_demonstration",
+    "repository": "demo-venv",
+    "state_backend": "declared-directory-demo",
+    "history": [
+      {
+        "command": [
+          "{python}",
+          "operation.py"
+        ],
+        "result": {
+          "argv": [
+            "{python}",
+            "operation.py"
+          ],
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "controlled activation configuration unavailable\r\n"
+        }
+      }
+    ],
+    "future_fault_schedule": "one-shot failure; clear at boundary in every branch",
+    "certification": {
+      "mechanical_repetitions": 5,
+      "reference_repetitions": 3
+    },
+    "reference_repair_visible_to_agent": false
+  },
+  {
+    "site_id": "demo-patch-001",
+    "category": "patch",
+    "task": "Apply the intended changes: a.txt=new-a and b.txt=new-b; remove rejected patch files and preserve prior-work.txt.",
+    "command": [
+      "git",
+      "apply",
+      "--reject",
+      "change.patch"
+    ],
+    "legal_post": false,
+    "fault_class": "intrinsic_input_error",
+    "origin": "new_controlled_demonstration",
+    "repository": "demo-patch",
+    "state_backend": "declared-directory-demo",
+    "history": [
+      {
+        "command": [
+          "git",
+          "apply",
+          "--reject",
+          "change.patch"
+        ],
+        "result": {
+          "argv": [
+            "git",
+            "apply",
+            "--reject",
+            "change.patch"
+          ],
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "Checking patch a.txt...\nChecking patch b.txt...\nerror: while searching for:\nold-b\n\nerror: patch failed: b.txt:1\nApplied patch a.txt cleanly.\nApplying patch b.txt with 1 reject...\nRejected hunk #1.\n"
+        }
+      }
+    ],
+    "future_fault_schedule": "one-shot failure; clear at boundary in every branch",
+    "certification": {
+      "mechanical_repetitions": 5,
+      "reference_repetitions": 3
+    },
+    "reference_repair_visible_to_agent": false
+  },
+  {
+    "site_id": "demo-database-001",
+    "category": "database",
+    "task": "Complete migration with records exactly [(1,'Alice'),(2,'Bob')], preserve prior table and prior-work.txt.",
+    "command": [
+      "{python}",
+      "operation.py"
+    ],
+    "legal_post": false,
+    "fault_class": "intrinsic_input_error",
+    "origin": "new_controlled_demonstration",
+    "repository": "demo-database",
+    "state_backend": "declared-directory-demo",
+    "history": [
+      {
+        "command": [
+          "{python}",
+          "operation.py"
+        ],
+        "result": {
+          "argv": [
+            "{python}",
+            "operation.py"
+          ],
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\r\n  File \"/task\\operation.py\", line 5, in <module>\r\n    db.execute(\"INSERT INTO records VALUES (1, 'Bob')\")\r\nsqlite3.IntegrityError: UNIQUE constraint failed: records.id\r\n"
+        }
+      }
+    ],
+    "future_fault_schedule": "one-shot failure; clear at boundary in every branch",
+    "certification": {
+      "mechanical_repetitions": 5,
+      "reference_repetitions": 3
+    },
+    "reference_repair_visible_to_agent": false
+  },
+  {
+    "site_id": "demo-build-001",
+    "category": "build",
+    "task": "Compile alpha and beta into cache/*.pyc and create build.json listing both units. Validate the compiled product 21*2=42; preserve prior-work.txt.",
+    "command": [
+      "{python}",
+      "operation.py"
+    ],
+    "legal_post": true,
+    "fault_class": "controlled_external_fault",
+    "origin": "new_controlled_demonstration",
+    "repository": "demo-build",
+    "state_backend": "declared-directory-demo",
+    "history": [
+      {
+        "command": [
+          "{python}",
+          "operation.py"
+        ],
+        "result": {
+          "argv": [
+            "{python}",
+            "operation.py"
+          ],
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "controlled build interrupted after first compiled unit\r\n"
+        }
+      }
+    ],
+    "future_fault_schedule": "one-shot failure; clear at boundary in every branch",
+    "certification": {
+      "mechanical_repetitions": 5,
+      "reference_repetitions": 3
+    },
+    "reference_repair_visible_to_agent": false
+  },
+  {
+    "site_id": "demo-generation-001",
+    "category": "generation",
+    "task": "Generate header.txt=HEADER, body.txt=BODY and index.json listing both in generated/; preserve prior-work.txt.",
+    "command": [
+      "{python}",
+      "operation.py"
+    ],
+    "legal_post": true,
+    "fault_class": "controlled_external_fault",
+    "origin": "new_controlled_demonstration",
+    "repository": "demo-generation",
+    "state_backend": "declared-directory-demo",
+    "history": [
+      {
+        "command": [
+          "{python}",
+          "operation.py"
+        ],
+        "result": {
+          "argv": [
+            "{python}",
+            "operation.py"
+          ],
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "controlled generation interrupted after header\r\n"
+        }
+      }
+    ],
+    "future_fault_schedule": "one-shot failure; clear at boundary in every branch",
+    "certification": {
+      "mechanical_repetitions": 5,
+      "reference_repetitions": 3
+    },
+    "reference_repair_visible_to_agent": false
+  }
+]

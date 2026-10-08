@@ -1,0 +1,77 @@
+{
+  "source": "paper Table 2 and Sections 4-5",
+  "unique_recovery_runs": 63408,
+  "cohorts": [
+    {
+      "name": "MAIN",
+      "sites": 240,
+      "repositories": 60,
+      "natural": 180,
+      "controlled": 60,
+      "sites_per_category": 40,
+      "new_runs": 11520,
+      "formula": "240 * 8 configurations * 2 protocols * 3 repeats"
+    },
+    {
+      "name": "SURGERY",
+      "sites": 60,
+      "parent": "POLICY",
+      "sites_per_category": 10,
+      "new_runs": 14400,
+      "formula": null
+    },
+    {
+      "name": "POLICY",
+      "sites": 120,
+      "parent": "MAIN",
+      "sites_per_category": 20,
+      "new_runs": 5760,
+      "formula": "120 * 2 models * 4 additional controllers * 2 protocols * 3 repeats"
+    },
+    {
+      "name": "ABLATION",
+      "sites": 120,
+      "parent": "POLICY",
+      "new_runs": 4320,
+      "formula": "120 * 2 models * 3 controllers * 2 protocols * 3 repeats"
+    },
+    {
+      "name": "RESOURCE",
+      "sites": 60,
+      "parent": "SURGERY",
+      "new_runs": 10800,
+      "formula": "60 * 2 models * 5 controllers * 2 protocols * 3 new budgets * 3 repeats"
+    },
+    {
+      "name": "REPLICATION",
+      "sites": 120,
+      "repositories": 20,
+      "natural": 90,
+      "controlled": 30,
+      "sites_per_category": 20,
+      "new_runs": 4320,
+      "formula": "120 * 2 models * 3 controllers * 2 protocols * 3 repeats"
+    },
+    {
+      "name": "OTHER",
+      "new_runs": 12288,
+      "formula": null,
+      "components": [
+        "LEGAL-POST: 120 MAIN sites",
+        "EFFECT-FREE: 60 separate sites",
+        "commercial validation: POLICY",
+        "native handoff: 64 separate sites"
+      ]
+    }
+  ],
+  "membership_files_available": false,
+  "development_sites": 24,
+  "discovery_tasks": 200,
+  "discovery_salt": "pe-fse-v2",
+  "replication_salt": "afterstate-replication-v1",
+  "unknowns": [
+    "SURGERY component-level unique-run allocation",
+    "OTHER exact unique-run allocation",
+    "site membership and exact repeat seeds"
+  ]
+}

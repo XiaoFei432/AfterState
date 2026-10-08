@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:afterstate:run:1",
+  "title": "AfterState linked continuation",
+  "type": "object",
+  "required": [
+    "run_id",
+    "site_id",
+    "repository",
+    "category",
+    "origin",
+    "configuration",
+    "controller",
+    "protocol",
+    "repeat",
+    "feedback",
+    "budget_actions",
+    "success",
+    "functional",
+    "state_obligations",
+    "completion_claim",
+    "silent_error",
+    "actions",
+    "first_request_sha256"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "site_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repository": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "type": "string"
+    },
+    "origin": {
+      "type": "string"
+    },
+    "configuration": {
+      "type": "string"
+    },
+    "controller": {
+      "type": "string"
+    },
+    "protocol": {
+      "enum": [
+        "PRE",
+        "REAL",
+        "UNDO",
+        "REINTRO",
+        "WORKTREE",
+        "OUTSIDE",
+        "POST"
+      ]
+    },
+    "repeat": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "feedback": {
+      "enum": [
+        "raw",
+        "neutral",
+        "terse"
+      ]
+    },
+    "budget_actions": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1
+    },
+    "success": {
+      "type": "boolean"
+    },
+    "functional": {
+      "type": "boolean"
+    },
+    "state_obligations": {
+      "type": "boolean"
+    },
+    "completion_claim": {
+      "type": "boolean"
+    },
+    "silent_error": {
+      "type": "boolean"
+    },
+    "actions": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "generated_tokens": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "first_request_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "first_model_request_sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "termination": {
+      "type": "string"
+    }
+  }
+}

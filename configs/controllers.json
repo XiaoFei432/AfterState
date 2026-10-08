@@ -1,0 +1,41 @@
+{
+  "source": "Section 5.1",
+  "reference_engine_accounting": "One action per model deliberation, tool operation, rejected attempt, or completion response.",
+  "controllers": {
+    "Native": {
+      "initial_action": "resume"
+    },
+    "Retry-1": {
+      "initial_action": "repeat exact failed argv/cwd/environment once; no cleanup"
+    },
+    "Inspect-1": {
+      "max_state_reads": 1,
+      "read_output_bytes": 2048
+    },
+    "Inspect-3": {
+      "max_state_reads": 3,
+      "read_output_bytes": 2048
+    },
+    "Inspect-6": {
+      "max_state_reads": 6,
+      "read_output_bytes": 2048
+    },
+    "Read-3": {
+      "max_immutable_reads": 3,
+      "task_state_visible": false
+    },
+    "Reflexion": {
+      "max_triggers": 3,
+      "reflection_tokens": 512,
+      "max_memories": 3
+    },
+    "Self-Refine": {
+      "max_triggers": 3,
+      "candidate_tokens": 512,
+      "rounds": 2,
+      "feedback_tokens": 256,
+      "revision_tokens": 512,
+      "execute": "final revision only"
+    }
+  }
+}

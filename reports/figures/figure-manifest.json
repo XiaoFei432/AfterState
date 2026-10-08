@@ -1,0 +1,26 @@
+[
+  {
+    "name": "figure06_paired_oracle",
+    "caption": "Figure 6, recomputed from the printed counts."
+  },
+  {
+    "name": "figure07_state_interventions",
+    "caption": "Figure 7(a) and aggregate state coverage. Original Figure 7(b) stratum values are unavailable."
+  },
+  {
+    "name": "figure08_controllers",
+    "caption": "Figure 8: manuscript percentages; run-level records unavailable."
+  },
+  {
+    "name": "figure09_available_values",
+    "caption": "Available Figure 9(a) rates and text-reported interactions. The full Figure 9(b) controller curves cannot be reconstructed from printed numeric data."
+  },
+  {
+    "name": "figure10_transfer",
+    "caption": "Figure 10, printed model contrasts and exact held-out matched counts."
+  },
+  {
+    "name": "table05_category_rates",
+    "caption": "Visualization of Table 5. Build/cache is the category with higher REAL success."
+  }
+]

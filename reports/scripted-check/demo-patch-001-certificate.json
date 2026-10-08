@@ -1,0 +1,22 @@
+{
+  "site_id": "demo-patch-001",
+  "origin": "new_controlled_demonstration",
+  "mechanical_repeats": 5,
+  "reference_repeats": 3,
+  "state_fingerprints": {
+    "PRE": "ca88b67212b18fc22679d9abe29479015d9c7d3453664c77aefcdd77044807da",
+    "REAL": "29f7485bbe11d5442d7460c0b98ab643721fc667b3a3f36528c61e8a9c142f86",
+    "UNDO": "ca88b67212b18fc22679d9abe29479015d9c7d3453664c77aefcdd77044807da",
+    "REINTRO": "29f7485bbe11d5442d7460c0b98ab643721fc667b3a3f36528c61e8a9c142f86",
+    "WORKTREE": "29f7485bbe11d5442d7460c0b98ab643721fc667b3a3f36528c61e8a9c142f86",
+    "OUTSIDE": "ca88b67212b18fc22679d9abe29479015d9c7d3453664c77aefcdd77044807da"
+  },
+  "certified": true,
+  "projection": "bytes, paths, modes, symlink targets; excludes mtime from equality",
+  "first_request_sha256": "5f1ed85d7a96e0f24c2ec1c6506d3fb365c5f56dcf9460541b4cc7a6d3724a99",
+  "post_eligible": false,
+  "changed_paths": [
+    "a.txt",
+    "b.txt.rej"
+  ]
+}

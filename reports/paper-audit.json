@@ -1,0 +1,593 @@
+{
+  "origin": "paper_aggregate_arithmetic_audit",
+  "passed": true,
+  "checks": [
+    {
+      "name": "audit categories sum to nonzero returns",
+      "actual": 2400,
+      "expected": 2400,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "partial-effects prevalence among nonzero returns (%)",
+      "actual": 25.0,
+      "expected": 25,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "MAIN per-protocol count",
+      "actual": 5760,
+      "expected": 5760,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "unique recovery ledger",
+      "actual": 63408,
+      "expected": 63408,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "MAIN pairing total",
+      "actual": 5760,
+      "expected": 5760,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "PRE successes from pairing",
+      "actual": 4164,
+      "expected": 4164,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "REAL successes from pairing",
+      "actual": 3624,
+      "expected": 3624,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "PRE full success (%)",
+      "actual": 72.29166666666667,
+      "expected": 72.3,
+      "tolerance": 0.051,
+      "passed": true
+    },
+    {
+      "name": "REAL full success (%)",
+      "actual": 62.916666666666664,
+      "expected": 62.9,
+      "tolerance": 0.051,
+      "passed": true
+    },
+    {
+      "name": "MAIN success contrast (pp)",
+      "actual": 9.375,
+      "expected": 9.4,
+      "tolerance": 0.051,
+      "passed": true
+    },
+    {
+      "name": "paired disagreement (%)",
+      "actual": 25.0,
+      "expected": 25,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "action increase from printed means (%)",
+      "actual": 36.00000000000001,
+      "expected": 36,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "natural sites",
+      "actual": 180,
+      "expected": 180,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "controlled sites",
+      "actual": 60,
+      "expected": 60,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "Package installation category size",
+      "actual": 40,
+      "expected": 40,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "Package installation rounded gap",
+      "actual": 17.700000000000003,
+      "expected": 17.7,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Virtual environment category size",
+      "actual": 40,
+      "expected": 40,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "Virtual environment rounded gap",
+      "actual": 16.60000000000001,
+      "expected": 16.7,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Patch application category size",
+      "actual": 40,
+      "expected": 40,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "Patch application rounded gap",
+      "actual": 5.799999999999997,
+      "expected": 5.8,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Database / migration category size",
+      "actual": 40,
+      "expected": 40,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "Database / migration rounded gap",
+      "actual": 17.700000000000003,
+      "expected": 17.7,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Build artifacts / cache category size",
+      "actual": 40,
+      "expected": 40,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "Build artifacts / cache rounded gap",
+      "actual": -5.0,
+      "expected": -5,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Multi-file generation category size",
+      "actual": 40,
+      "expected": 40,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "Multi-file generation rounded gap",
+      "actual": 3.299999999999997,
+      "expected": 3.3,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "weaker oracle extra PRE acceptances",
+      "actual": 210,
+      "expected": 210,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "weaker oracle extra REAL acceptances",
+      "actual": 564,
+      "expected": 564,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "contrast concealed by weaker oracle (%)",
+      "actual": 65.55555555555556,
+      "expected": 65.6,
+      "tolerance": 0.051,
+      "passed": true
+    },
+    {
+      "name": "UNDO restoration of aggregate contrast (%)",
+      "actual": 92.0,
+      "expected": 92,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "WORKTREE residual gap (pp)",
+      "actual": 5.555555555555555,
+      "expected": 5.6,
+      "tolerance": 0.051,
+      "passed": true
+    },
+    {
+      "name": "Retry-1 vs Native PRE advantage",
+      "actual": 5.0,
+      "expected": 5,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Retry-1 vs Native REAL advantage",
+      "actual": -2.5,
+      "expected": -2.5,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Retry-1 vs Native interaction",
+      "actual": -7.5,
+      "expected": -7.5,
+      "tolerance": 0.201,
+      "passed": true
+    },
+    {
+      "name": "Retry-1 vs Native reversal",
+      "actual": 1,
+      "expected": 1,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "Reflexion vs Native PRE advantage",
+      "actual": 2.5,
+      "expected": 2.5,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Reflexion vs Native REAL advantage",
+      "actual": 2.5,
+      "expected": 2.5,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Reflexion vs Native interaction",
+      "actual": 0.0,
+      "expected": 0,
+      "tolerance": 0.201,
+      "passed": true
+    },
+    {
+      "name": "Reflexion vs Native reversal",
+      "actual": 0,
+      "expected": 0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "Self-Refine vs Native PRE advantage",
+      "actual": 3.299999999999997,
+      "expected": 3.3,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Self-Refine vs Native REAL advantage",
+      "actual": 5.0,
+      "expected": 5,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Self-Refine vs Native interaction",
+      "actual": 1.7000000000000028,
+      "expected": 1.7,
+      "tolerance": 0.201,
+      "passed": true
+    },
+    {
+      "name": "Self-Refine vs Native reversal",
+      "actual": 0,
+      "expected": 0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "Inspect-3 vs Native PRE advantage",
+      "actual": 0.7999999999999972,
+      "expected": 0.8,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Inspect-3 vs Native REAL advantage",
+      "actual": 10.799999999999997,
+      "expected": 10.8,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Inspect-3 vs Native interaction",
+      "actual": 10.0,
+      "expected": 10,
+      "tolerance": 0.201,
+      "passed": true
+    },
+    {
+      "name": "Inspect-3 vs Native reversal",
+      "actual": 0,
+      "expected": 0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "Reflexion vs Retry-1 PRE advantage",
+      "actual": -2.5,
+      "expected": -2.5,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Reflexion vs Retry-1 REAL advantage",
+      "actual": 5,
+      "expected": 5,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Reflexion vs Retry-1 interaction",
+      "actual": 7.5,
+      "expected": 7.5,
+      "tolerance": 0.201,
+      "passed": true
+    },
+    {
+      "name": "Reflexion vs Retry-1 reversal",
+      "actual": 1,
+      "expected": 1,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "Self-Refine vs Retry-1 PRE advantage",
+      "actual": -1.7000000000000028,
+      "expected": -1.7,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Self-Refine vs Retry-1 REAL advantage",
+      "actual": 7.5,
+      "expected": 7.5,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Self-Refine vs Retry-1 interaction",
+      "actual": 9.200000000000003,
+      "expected": 9.2,
+      "tolerance": 0.201,
+      "passed": true
+    },
+    {
+      "name": "Self-Refine vs Retry-1 reversal",
+      "actual": 1,
+      "expected": 1,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "Inspect-3 vs Retry-1 PRE advantage",
+      "actual": -4.200000000000003,
+      "expected": -4.2,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Inspect-3 vs Retry-1 REAL advantage",
+      "actual": 13.299999999999997,
+      "expected": 13.3,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Inspect-3 vs Retry-1 interaction",
+      "actual": 17.5,
+      "expected": 17.5,
+      "tolerance": 0.201,
+      "passed": true
+    },
+    {
+      "name": "Inspect-3 vs Retry-1 reversal",
+      "actual": 1,
+      "expected": 1,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "Self-Refine vs Reflexion PRE advantage",
+      "actual": 0.7999999999999972,
+      "expected": 0.8,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Self-Refine vs Reflexion REAL advantage",
+      "actual": 2.5,
+      "expected": 2.5,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Self-Refine vs Reflexion interaction",
+      "actual": 1.7000000000000028,
+      "expected": 1.7,
+      "tolerance": 0.201,
+      "passed": true
+    },
+    {
+      "name": "Self-Refine vs Reflexion reversal",
+      "actual": 0,
+      "expected": 0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "Inspect-3 vs Reflexion PRE advantage",
+      "actual": -1.7000000000000028,
+      "expected": -1.7,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Inspect-3 vs Reflexion REAL advantage",
+      "actual": 8.299999999999997,
+      "expected": 8.3,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Inspect-3 vs Reflexion interaction",
+      "actual": 10.0,
+      "expected": 10,
+      "tolerance": 0.201,
+      "passed": true
+    },
+    {
+      "name": "Inspect-3 vs Reflexion reversal",
+      "actual": 1,
+      "expected": 1,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "Inspect-3 vs Self-Refine PRE advantage",
+      "actual": -2.5,
+      "expected": -2.5,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Inspect-3 vs Self-Refine REAL advantage",
+      "actual": 5.799999999999997,
+      "expected": 5.8,
+      "tolerance": 0.151,
+      "passed": true
+    },
+    {
+      "name": "Inspect-3 vs Self-Refine interaction",
+      "actual": 8.299999999999997,
+      "expected": 8.3,
+      "tolerance": 0.201,
+      "passed": true
+    },
+    {
+      "name": "Inspect-3 vs Self-Refine reversal",
+      "actual": 1,
+      "expected": 1,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "strict mean reversals",
+      "actual": 6,
+      "expected": 6,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "replication pairing total",
+      "actual": 720,
+      "expected": 720,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "replication Inspect successes",
+      "actual": 510,
+      "expected": 510,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "replication Retry successes",
+      "actual": 432,
+      "expected": 432,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "held-out success advantage (pp)",
+      "actual": 10.833333333333334,
+      "expected": 10.8,
+      "tolerance": 0.051,
+      "passed": true
+    },
+    {
+      "name": "Native replication pre rate",
+      "actual": 71.66666666666667,
+      "expected": 71.7,
+      "tolerance": 0.051,
+      "passed": true
+    },
+    {
+      "name": "Native replication real rate",
+      "actual": 62.5,
+      "expected": 62.5,
+      "tolerance": 0.051,
+      "passed": true
+    },
+    {
+      "name": "Retry-1 replication pre rate",
+      "actual": 75.83333333333333,
+      "expected": 75.8,
+      "tolerance": 0.051,
+      "passed": true
+    },
+    {
+      "name": "Retry-1 replication real rate",
+      "actual": 60.0,
+      "expected": 60,
+      "tolerance": 0.051,
+      "passed": true
+    },
+    {
+      "name": "Inspect-3 replication pre rate",
+      "actual": 72.91666666666667,
+      "expected": 72.9,
+      "tolerance": 0.051,
+      "passed": true
+    },
+    {
+      "name": "Inspect-3 replication real rate",
+      "actual": 70.83333333333333,
+      "expected": 70.8,
+      "tolerance": 0.051,
+      "passed": true
+    }
+  ],
+  "warnings": [
+    "Figure 7(b) stratum-level numeric values are unavailable.",
+    "Figure 9(b) does not print all controller-by-budget rates: only text-reported values are retained.",
+    "The 40-action resource cohort is SURGERY; Figure 8 uses POLICY. Resource cells without numeric source values are null.",
+    "The supplement referenced by the paper was not provided; immutable commits, revisions and seed bank cannot be recovered.",
+    "Figure 4 provides aggregate admission totals 600/480/360/240; individual rejection records are unavailable.",
+    "These checks evaluate arithmetic relationships in manuscript aggregate data."
+  ],
+  "derived": {
+    "main_gap_pp": 9.375,
+    "focal_interaction_pp": 17.5,
+    "hidden_contrast_pct": 65.55555555555556
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "source": "fse2027-paper3929.pdf",
+  "source_sha256": "3a1d72952c33d07d376a5780868d5390a8c1b82f81e553341b925317e89f2308",
+  "page": 2,
+  "figure": 1,
+  "caption": "Failure-state semantics and the paired AfterState comparison.",
+  "method": "PDF page rendering followed by rectangular cropping",
+  "render_scale": 4,
+  "crop_points_top_left_origin": [
+    62,
+    82,
+    426,
+    278
+  ],
+  "output": "overview.png",
+  "width_pixels": 1456,
+  "height_pixels": 784
+}

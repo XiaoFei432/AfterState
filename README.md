@@ -1,71 +1,132 @@
 # AfterState: State-Faithful Evaluation of Coding-Agent Recovery
 
-Artifact for FSE 2027 submission 3929. The repository contains experimental specifications, configuration registries, paper aggregate data, figure-generation scripts, numerical checks, and a Python implementation of the recovery protocol.
+This repository contains the protocol implementation, experimental specifications, and aggregate data for the paper:
 
-[Artifact contents](ARTIFACT.md) | [Protocol](docs/PROTOCOL.md) | [Adapters](docs/ADAPTERS.md) | [Data and implementation scope](docs/LIMITATIONS.md)
+> - AfterState: State-Faithful Evaluation of Coding-Agent Recovery.
 
-## Data and implementation
+## Overview
 
-| Component | Contents |
-|---|---|
-| Paper data | Counts and rounded percentages transcribed from the supplied manuscript; source locations and PDF SHA-256 included |
-| State conditions | PRE, REAL, UNDO, REINTRO, WORKTREE, OUTSIDE, and eligible POST |
-| Controllers | Native, Retry-1, Reflexion, Self-Refine, Inspect-1/3/6, Read-3 |
-| Executable examples | Six controlled fixtures: packages, virtual environments, patches, databases, build caches, and generation |
-| Statistics | Paired outcomes, repository-cluster bootstrap, interactions, Holm adjustment, held-out selection |
-| Figures | Six groups in PNG/SVG/PDF and a self-contained HTML report |
-| Original study materials | The 240-site dataset, original snapshots, 63,408 run records, model outputs, and native framework adapters are not included |
+<p align="center">
+  <img src="./figs/overview.png" width="90%" alt="AfterState failure-state semantics and paired PRE/REAL recovery protocols">
+</p>
 
-Paper aggregates use the provenance label `transcribed_paper_aggregates`. Fixture demonstrations use `new_controlled_demonstration`; adapter experiments use `new_controlled_experiment`. Unavailable numeric entries are stored as `null`.
+AfterState evaluates coding-agent recovery at a failed-command boundary. PRE restores the state before command execution, while REAL preserves the state left by the failed command. Paired continuations share the task, command history, failure feedback, and recovery budget. UNDO and REINTRO remove and reconstruct the recorded state difference; WORKTREE and OUTSIDE partition its resources; POST represents completion under an eligible external-fault intervention. Final-state checks evaluate task completion and persistent-state obligations.
 
-## Installation and execution
+The implementation includes six controlled examples covering package installation, virtual environments, patch application, database migration, build caches, and multi-file generation. Recovery controllers include Native, Retry-1, Reflexion, Self-Refine, Inspect-1/3/6, and Read-3. Analysis scripts compute paired outcomes, repository-cluster bootstrap intervals, controller interactions, and held-out policy selection.
 
-Requirements: Python 3.10+, Git, and pip. Matplotlib and NumPy are used for figures; pytest is used for tests.
+The overview image is cropped from Figure 1 on page 2 of the manuscript. Paper aggregate data are transcribed from the manuscript; example execution records are stored separately. The original 240-site dataset, snapshots, 63,408 run records, and native public-framework adapters are not included. File-level scope is documented in [Data and implementation scope](docs/LIMITATIONS.md).
 
-```console
+---
+
+## Requirements
+
+- Python >= 3.10
+- Git, available on the system path
+- pip, used for dependency installation and the local wheel example
+- Matplotlib 3.10.6 and NumPy 1.26.4, used for figures
+- pytest 7.4.0, used for tests
+
+The included examples execute local commands and install locally generated wheels. They require no GPU, model endpoint, or API key. Dependency installation can require network access. Paper-declared model and inference settings are recorded in `configs/registry.json`.
+
+---
+
+## Usage
+
+### 1. Install Dependencies
+
+Run from the repository root:
+
+```bash
 python -m pip install -r requirements.txt
+```
+
+### 2. Check Aggregate Data
+
+Check the numerical relationships in the manuscript's reported counts and percentages:
+
+```bash
 python -m afterstate audit
+```
+
+The audit writes 82 check results to:
+
+```text
+reports/paper-audit.json
+```
+
+### 3. Generate Figures
+
+Generate figures from the aggregate data in `data/paper/`:
+
+```bash
 python -m afterstate figures
-python -m pytest -q
+```
+
+The command produces PNG, SVG, and PDF files in `reports/figures/`. Open the HTML report at:
+
+```text
+reports/figures/index.html
+```
+
+Missing source values remain `null`. The generated report identifies the available Figure 9 values and the aggregate coverage view used alongside Figure 7(a).
+
+### 4. Run the Controlled Examples
+
+Execute the six fixture categories and certify their state transitions:
+
+```bash
 python -m afterstate demo --output runs/demo
 ```
 
-The complete sequence is available through:
+Each fixture runs five mechanical repetitions and three reference-recovery repetitions. The state-condition evaluation produces 40 reference-repair continuations. Outputs are written to:
 
-```console
-python scripts/reproduce.py
+```text
+runs/demo/certificates.json
+runs/demo/demo-manifests.json
+runs/demo/demo-runs.jsonl
+runs/demo/summary.json
 ```
 
-`--skip-demo` omits fixture certification. The examples use local operations and local wheels; they require no model endpoint, API key or GPU. Dependency installation can require network access.
+These continuations use reference repairs and make no model calls.
 
-## Outputs
+### 5. Run Paired Controller Evaluation
 
-- [Figure report](reports/figures/index.html)
-- [Arithmetic checks](reports/paper-audit.json)
-- [Fixture run summary](reports/demo/summary.json)
-- [Validation results](reports/VALIDATION.md)
+Run a scripted completion-claim example on the patch and database fixtures:
 
-## Paired adapter runs
-
-```console
+```bash
 python -m afterstate run --actions-file examples/claim-only.json --categories patch database --controllers Native Retry-1 Inspect-3 --repeats 1 --configuration scripted-claim-only --output runs/claim-check
+```
+
+Analyze the resulting paired records:
+
+```bash
 python -m afterstate analyze runs/claim-check/runs.jsonl --output runs/claim-check/analysis.json
 ```
 
-The example uses scripted actions. Model integrations use the [JSON adapter interface](docs/ADAPTERS.md). Registered public-framework versions are configuration metadata; native integrations are not included.
+For an external adapter, save its executable argument list in `adapter-command.json`:
 
-## Directory structure
-
-```text
-afterstate/    State storage, protocol, fixtures, controllers, statistics, CLI
-configs/       Cohorts, model and framework versions, resource settings
-data/paper/    Aggregate JSON/CSV and source metadata
-docs/          Protocol, interfaces, analysis, scope, upload procedure
-examples/      Scripted adapter examples
-schemas/       Site and run-record JSON schemas
-scripts/       Execution and packaging commands
-tests/         Unit and integration tests
-reports/       Figures, numerical checks, execution records
+```json
+["python", "examples/stdio_adapter.py"]
 ```
 
-The [MIT license](LICENSE) applies to the software. Third-party snapshots, model weights and the manuscript PDF are not distributed. Upload instructions are in [docs/RELEASE.md](docs/RELEASE.md).
+Then run:
+
+```bash
+python -m afterstate run --adapter-command adapter-command.json --categories patch database --controllers Native Inspect-3 --configuration custom-adapter --output runs/custom
+```
+
+The included stdio adapter returns scripted actions. The request/response fields and model integration interface are described in [Adapters](docs/ADAPTERS.md).
+
+### 6. Run Tests
+
+```bash
+python -m pytest -q
+```
+
+To execute the aggregate audit, figure generation, tests, and fixture demonstration together:
+
+```bash
+python scripts/reproduce.py
+```
+
+Use `--skip-demo` to omit fixture certification. Recorded local results are available in [Validation results](reports/VALIDATION.md).

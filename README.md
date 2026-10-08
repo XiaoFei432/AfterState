@@ -1,6 +1,6 @@
 # AfterState: State-Faithful Evaluation of Coding-Agent Recovery
 
-This repository contains the protocol implementation, experimental specifications, and aggregate data for the paper:
+This repository contains the implementation for the paper:
 
 > - AfterState: State-Faithful Evaluation of Coding-Agent Recovery.
 
@@ -14,8 +14,6 @@ AfterState evaluates coding-agent recovery at a failed-command boundary. PRE res
 
 The implementation includes six controlled examples covering package installation, virtual environments, patch application, database migration, build caches, and multi-file generation. Recovery controllers include Native, Retry-1, Reflexion, Self-Refine, Inspect-1/3/6, and Read-3. Analysis scripts compute paired outcomes, repository-cluster bootstrap intervals, controller interactions, and held-out policy selection.
 
-The overview image is cropped from Figure 1 on page 2 of the manuscript. Paper aggregate data are transcribed from the manuscript; example execution records are stored separately. The original 240-site dataset, snapshots, 63,408 run records, and native public-framework adapters are not included. File-level scope is documented in [Data and implementation scope](docs/LIMITATIONS.md).
-
 ---
 
 ## Requirements
@@ -25,8 +23,6 @@ The overview image is cropped from Figure 1 on page 2 of the manuscript. Paper a
 - pip, used for dependency installation and the local wheel example
 - Matplotlib 3.10.6 and NumPy 1.26.4, used for figures
 - pytest 7.4.0, used for tests
-
-The included examples execute local commands and install locally generated wheels. They require no GPU, model endpoint, or API key. Dependency installation can require network access. Paper-declared model and inference settings are recorded in `configs/registry.json`.
 
 ---
 
